@@ -6,6 +6,8 @@ dnf install docker -y
 systemctl start docker
 systemctl enable docker
 
+dnf install git
+
 curl -L "https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
