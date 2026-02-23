@@ -45,7 +45,8 @@ jobs:
         username: ${{ secrets.VM_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /home/ubuntu/mean-crud-app
+          cd /home/ec2-user/mean-crud-app
+          git reset --hard origin/main
           git pull origin main
           docker-compose down
           docker-compose pull
